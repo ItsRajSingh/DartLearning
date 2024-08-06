@@ -2,6 +2,16 @@ class Microphone{
   String name= "name";
   String color= "color"; 
   int model =4356;
+  // Constructor
+  Microphone(String name, String color, int model)
+  {
+    name = this.name;
+    color = this.color;
+    model = this.model;
+  }
+  //Microrphone(this.name, this.color, this.model);
+
+
   void turnOn()
   {
   print("$name is on!");
@@ -12,6 +22,7 @@ class Microphone{
     print("$name is turned off");
 
   } 
+
   bool isOn() => true;
   int  modelNumber() => model;
   void setVolume()
@@ -20,10 +31,7 @@ class Microphone{
   }
 }
 void main(){
-  var mic = new Microphone();
-  mic.name = "Blue Yeti";
-  mic.color = "Silver Gray";
-  mic.model = 1345;
+  var mic = new Microphone("Blue Yeti","Silver Gray",1345);
   print(mic.model);
   mic.turnOn();
   mic.setVolume();
